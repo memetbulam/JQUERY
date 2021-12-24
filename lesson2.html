@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 2 Element Seçiciler</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // $(".result, #test").hide();
+                // $("*").hide();
+                // $(this).hide();
+                // $("p.result").hide();
+                // $("p:first").hide();
+                // $("ul li:first").hide();
+                // $("ul li:first-child").hide();
+                // $("[href]").hide();
+                // $("a[target='_blank']").hide();
+                // $(":button").hide();
+                // $("tr:odd").css("color", "red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2 class="result">JQuery Eğitim Seti</h2>
+
+        <p id="test">Tıkla bana JQUERY gücünü gör</p>
+        <p>Bana da tıkla ve kolay javascript yazımını hazzını al</p>
+        <p class="result">Hani bana hani bana :)</p>
+
+        <p>List 1</p>
+        <ul>
+            <li>javascript</li>
+            <li>JQUERY</li>
+            <li>Angular JS</li>
+            <li>Vue JS</li>
+        </ul>
+        <p>List 2</p>
+        <ul>
+            <li>javascript</li>
+            <li>JQUERY</li>
+            <li>Angular JS</li>
+            <li>Vue JS</li>
+        </ul>
+
+        <p><a href="#" target="_blank">javascript Öğreniyorum.</a></p>
+        <p><a href="#" target="_parent">JQuery Öğreniyorum.</a></p>
+
+        <table class="table table-striped table-dark">
+            <thead>
+                <th scope="col">0</th>
+                <th scope="col">Software</th>
+                <th scope="col">Language</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>javascript</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jquery</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Angular JS</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>React JS</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Vue JS</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Node JS</td>
+                    <td>English</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-dark">Click Me</button>
+        <input type="button" value="Gönder">
+    </div>
+</body>
+
+</html>

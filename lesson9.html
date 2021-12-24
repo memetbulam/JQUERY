@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 9 Event Property 2</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>JQuery ile event kullanımları</p>
+    <div style="border: 2px solid black;background-color: darkolivegreen;">Bu bir div elementi
+        <p style="background-color: darkgoldenrod;">Div içindeki paragraf<br>
+            <span style="background-color: red;">paragrafiçindeki span</span>
+        </p>
+    </div><br><br>
+    <div id="result"></div><br>
+    <input type="text"><br><br>
+    <p><button type="button" class="btn btn-dark">Click Me</button></p>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("p").mouseenter(function (event) {
+            //     $('#result').html(event.relatedTarget.nodeName);
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     return "Hello JQuery";
+            // });
+            // $("button").click(function (event) {
+            //     $("#result").text(event.result);
+            // });
+
+            // Örnek 3
+            // $("div").click(function (event) {
+            //     alert("İlk alert çalıştı");
+            //     event.stopImmediatePropagation();
+            // });
+            // $("div").click(function () {
+            //     alert("İkinci alert çalıştı");
+            // });
+            // $("div").click(function () {
+            //     alert("Üçüncü alert çalıştı");
+            // });
+
+            // Örnek 4
+            // $("span").click(function (event) {
+            //     alert("Span tıkladın!");
+            //     event.stopPropagation();
+            // });
+            // $("p").click(function () {
+            //     alert("Paragrafa tıkladın!");
+            // });
+            // $("div").click(function () {
+            //     alert("Div'e tıkladın!");
+            //     event.stopPropagation();
+            // });
+
+            // Örnek 5
+            // $("p, button, h2").click(function (event) {
+            //     $("#result").html(event.target.nodeName + " elementi tarafından tetiklendi!");
+            // });
+
+            // Örnek 6
+            // $("button").click(function (event) {
+            //     $("#result").text("1970'den bugüne kadar olan zamanı milisaniye olarak gösterir " + event.timeStamp);
+            // });
+
+            // Örnek 6
+            // $("p").on("click dblclick mouseover mouseout", function (event) {
+            //     $("#result").text("Event Türü: " + event.type);
+            // });
+
+            // Örnek 7
+            // $("input").keydown(function (event) {
+            //     $("#result").text("Key: " + event.which);
+            // });
+        });
+    </script>
+</body>
+
+</html>

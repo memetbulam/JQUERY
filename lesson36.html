@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 36 User Interface UI Kullanımı</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lesson36.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <!-- Örnek 1 -->
+    <!-- <div id="box" class="box">
+        <div class="subBox" id="subBox">
+            <div class="title">Başlık</div>
+            <div class="content">İçerik kısmı</div>
+        </div>
+    </div> -->
+
+    <!-- Örnek 2 -->
+    <div id="box" class="box">
+        <div class="subBox" id="subBox">
+            <p>Beni Sürükle</p>
+        </div>
+        <div id="drop" class="drop">
+            <p>Buraya Bırak</p>
+        </div>
+    </div>
+
+    <script src="JS/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#subBox").draggable({
+            //     containment: "parent",
+            //     handle: ".title",
+            //     axis: "x"
+            // });
+
+            // Örnek 2
+            $("#subBox").draggable({
+                containment: "#box"
+            });
+            $("#drop").droppable({
+                drop: function (x, y) {
+                    $(this).addClass("test").find("p").html("Bıraktım!");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

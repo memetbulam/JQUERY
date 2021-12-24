@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 38 Basit Bir Login Kontrol Uygulaması</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lesson38.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <p id="message"></p>
+    <form action="#" method="post" id="frmLogin">
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </p>
+        <p>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass">
+        </p>
+        <button type="button" class="btn btn-dark">Login</button>
+    </form>
+
+
+    <script src="JS/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                var username, pass;
+                username = $("#frmLogin #username").val();
+                pass = $("#frmLogin #pass").val();
+                if (username == "") {
+                    $("#pass").css("border", "1px solid grey").css("box-shadow", "0 0 0");
+                    $("#username").css("border", "2px solid gold").css("box-shadow", "0 0 3px gold");
+                    $("#message").html("Kullanıcı Adı Boş Bırakılamaz").addClass("warning");
+                } else if (pass == "") {
+                    $("#username").css("border", "1px solid grey").css("box-shadow", "0 0 0");;
+                    $("#pass").css("border", "2px solid gold").css("box-shadow", "0 0 3px gold");
+                    $("#message").html("Şifre Boş Bırakılamaz").addClass("warning");
+                } else if (username != "Ahmet") {
+                    $("#pass").css("border", "1px solid grey").css("box-shadow", "0 0 0");
+                    $("#username").css("border", "2px solid red").css("box-shadow", "0 0 3px red");
+                    $("#message").html("Kullanıcı Adı Yanlış").removeClass("warning").addClass("error");
+                } else if (pass != "123") {
+                    $("#username").css("border", "1px solid grey").css("box-shadow", "0 0 0");
+                    $("#pass").css("border", "2px solid red").css("box-shadow", "0 0 3px red");
+                    $("#message").html("Şifre Yanlış").removeClass("warning").addClass("error");
+                } else {
+                    $("#username").css("border", "1px solid grey").css("box-shadow", "0 0 0");
+                    $("#pass").css("border", "1px solid grey").css("box-shadow", "0 0 0");
+                    $("#message").html("Giriş Başarılı").removeClass("warning").removeClass("error").addClass("success");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 18 Boyutlandırma</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson18.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <div class="result"></div>
+    <p><button>Click</button></p>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // Örnek 1
+                // var txt = "";
+                // txt += "div width: " + $("div").width() + "<br>";
+                // txt += "div height: " + $("div").height() + "<br>";
+                // txt += "div innerWidth(padding): " + $("div").innerWidth() + "<br>";
+                // txt += "div innerHeight(padding): " + $("div").innerHeight() + "<br>";
+                // txt += "div outerWidth(padding,border): " + $("div").outerWidth() + "<br>";
+                // txt += "div outerHeight(padding,border): " + $("div").outerHeight() + "<br>";
+                // txt += "div outerWidth(padding,border,margin)(true): " + $("div").outerWidth(true) + "<br>";
+                // txt += "div outerHeight(padding,border,margin)(true): " + $("div").outerHeight(true) + "<br>";
+                // txt += "document width/height: " + $(document).width() + "x" + $(document).height() + "<br>";
+                // txt += "window width/height: " + $(window).width() + "x" + $(window).height();
+                // $("div").html(txt);
+
+                // Örnek 2
+                $("div").width(600).height(600);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+ul {
+    background-color: darkkhaki;
+    float: left;
+    margin-right: 15px;
+    width: 300px;
+}
+p{
+    background-color: darkred;
+    color: white;
+    padding: 2px;
+    border: 1px solid black;
+}

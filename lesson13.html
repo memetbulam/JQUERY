@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 13 Stop Animation, Callback Functions ve Chaining</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson13.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <!-- Örnek 1 -->
+    <!-- <button type="button" id="stop">Stop</button>
+    <div id="divClick">Click</div>
+    <div id="panel">Hello JQuery Slide Effect</div> -->
+
+    <!-- Örnek 2 -->
+    <!-- <button type="button" id="Btn">Click</button>
+    <button type="button" id="BtnCall">NO CallBack</button><br>
+    <div id="panel1">Hello JQuery Slide Effect</div> -->
+
+    <!-- Örnek 3 -->
+    <button type="button" id="Btn">Chaining</button><br>
+    <p>Hello JQuery Slide Effect(Zincirleme İşlemler)</p>
+
+    <script>
+        // Örnek 1
+        // $(function () {
+        //     $("#divClick").click(function () {
+        //         $("#panel").slideDown(3000);
+        //     });
+        //     $("#stop").click(function () {
+        //         $("#panel").stop();
+        //     });
+        // });
+
+        // Örnek 2
+        // $(function () {
+        //     $("#Btn").click(function () {
+        //         $("#panel1").hide(2000, function () {
+        //             alert("Paragraf gizlendi");
+        //         });
+        //     });
+        //     $("#BtnCall").click(function () {
+        //         $("#panel1").hide(2000);
+        //         alert("Paragraf gizlendi");
+        //     });
+        // });
+
+        // Örnek 3
+        $(function () {
+            $("#Btn").click(function () {
+                $("p").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+</body>
+
+</html>

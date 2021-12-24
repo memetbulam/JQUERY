@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 16 Element Ekleme Metodları</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson16.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>JQuery ile element ekleme</p>
+    <p>JQuery ile append kullanımı</p>
+    <ol>
+        <li>Javascript</li>
+        <li>JQuery</li>
+        <li>Angular JS</li>
+    </ol><br>
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list</button>
+    <button id="btn3">Prepend text</button>
+    <button id="btn4">Prepend list</button>
+    <button onclick="appendText()">Append Function</button>
+    <button id="btn5">Insert before</button>
+    <button id="btn6">Insert after</button>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("p").append("<b>Yeni metin Append</b>");
+            });
+            $("#btn2").click(function () {
+                $("ol").append("<li><b>Vue JS</b></li>");
+            });
+
+            $("#btn3").click(function () {
+                $("p").prepend("<b>Yeni metin Prepend</b>");
+            });
+            $("#btn4").click(function () {
+                $("ol").prepend("<li><b>Node JS</b></li>");
+            });
+
+            $("#btn5").click(function () {
+                $("h2").before("<b>Seçtiğin elementin öncesine ekledim</b>");
+            });
+            $("#btn6").click(function () {
+                $("h2").after("<b>Seçtiğin elementin sonrasına ekledim</b>");
+            });
+        });
+        function appendText() {
+            var txt1, txt2, txt3;
+            txt1 = "<p>Yeni Metin (HTML)</p>";
+            txt2 = $("<p></p>").text("Yeni Metin (JQuery)");
+            txt3 = document.createElement("p");
+            txt3.innerHTML = "Yeni Metin (DOM)";
+            $("body").append(txt1, txt2, txt3);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 25 AJAX Kullanımı</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson25.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome to My JQuery Lesson</h2>
+    </div>
+
+    <p id="result"></p>
+    <button type="button" class="btn btn-dark">Click</button>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("button").click(function () {
+            //     $("div").load("../text/lesson25.txt");
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $("div").load("../text/lesson25.txt #p1");
+            // });
+
+            // Örnek 3
+            // $("button").click(function () {
+            //     $("div").load("../text/lesson24.txt", function (responseTxt, statusTxt, xhr) {
+            //         console.log(arguments);
+            //         if (statusTxt == "success")
+            //             alert("İçerik başarıyla yüklendi");
+            //         else if (statusTxt == "error")
+            //             alert("Hata: " + xhr.status + " : " + xhr.statusText);
+            //     });
+            // });
+
+            // Örnek 4
+            // $("button").click(function () {
+            //     $.get("../php/lesson25.php", function (data, status) {
+            //         $("#result").html("<b>verimiz: </b>" + data + "<br><b>Durum(status): </b>" + status);
+            //     });
+            // });
+
+            // Örnek 5
+            $("button").click(function () {
+                $.post("../php/lesson25.php", { firstName: "Ahmet", lastName: "HELVACI" }, function (data, status) {
+                    $("#result").html(data);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

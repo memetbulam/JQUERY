@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 22 Traversing Siblings</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson22.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("h2").siblings().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 2
+            // $("h2").siblings("p").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 3
+            // $("h2").next().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 4
+            // $("span").nextAll().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 5
+            // $("span").nextUntil("h5").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 6
+            // $("span").prev().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 7
+            // $("h4").prevAll().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 8
+            $("h5").prevUntil("span").css({
+                "color": "red",
+                "border": "2px solid red",
+                "font-weight": "bold"
+            });
+        });
+    </script>
+</head>
+
+<body class="siblings">
+    <div>div (parent)
+        <p>p (first)</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <p> (last)</p>
+    </div>
+</body>
+
+</html>

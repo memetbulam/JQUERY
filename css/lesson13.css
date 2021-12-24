@@ -1,0 +1,20 @@
+#divClick, #panel{
+    padding: 10px;
+    text-align: center;
+    background-color: darkkhaki;
+    border: 1px solid darkolivegreen;
+}
+
+#panel{
+    padding: 90px;
+    display: none;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    position: absolute;
+}

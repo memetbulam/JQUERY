@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 14 HTML DOM Nedir, JQuery ile DOM Müdahalesi</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p id="result1">Bu paragraf içindeki <b>bold</b> bir metin</p>
+
+    <form>
+        <input type="text" value="jquery eğitim seti"><br><br>
+        <textarea>Youtube.com</textarea><br><br>
+        <input type="checkbox" name="confirm" value="1" checked>Onayla<br><br>
+        <select>
+            <option selected>Javascript</option>
+            <option>Angular JS</option>
+        </select><br><br>
+        <select multiple>
+            <option selected>Node JS</option>
+            <option>React JS</option>
+            <option>Vue JS</option>
+        </select><br><br>
+        <input type="radio" name="gender" value="1" checked>Bayan
+        <input type="radio" name="gender" value="0">Bay
+    </form><br>
+
+    <button id="btn">Show</button>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <p id="result"></p>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#btn1").click(function () {
+            //     alert("Metin text() ile alındı: " + $('#result1').text());
+            // })
+            // $("#btn2").click(function () {
+            //     alert("Metin html() ile alındı: " + $('#result1').html());
+            // })
+
+            // Örnek 2
+            var getValue = "";
+            $("#btn").click(function () {
+                getValue += "Metin Kutusu: " + $("input:text").val() + "<br>";
+                getValue += "Metin Alanı: " + $("textarea").val() + "<br>";
+                getValue += "Onay Kutusu: " + $("input:checkbox:checked").val() + "<br>";
+                getValue += "Seçim: " + $("select").val() + "<br>";
+                getValue += "Çoklu Seçim: " + $("select[multiple]").val() + "<br>";
+                getValue += "Radio Düğmesi: " + $("input:radio:checked").val();
+                $("#result").html(getValue);
+            });
+        });
+    </script>
+</body>
+
+</html>

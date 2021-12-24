@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 31 prop, grep, merge, getScript ve trim metodları</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson31.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <p><a href="https://www.udemy.com/" title="Udemy Anasayfa" target="_blank">Udemy</a></p>
+    <p><input type="text" name="username1" id="username1"></p>
+    <p><input type="text" name="username2" id="username2"></p>
+    <div id="result"></div>
+    <button id="run" type="button" class="btn btn-dark">Click</button>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#run").click(function () {
+            //     $("#result").html($("<h2></h2>", { class: "important", text: "h2 etiketi ekledim" }));
+            // });
+
+            // Örnek 2
+            // $("#run").click(function () {
+            //     var value = $("a").prop("title");
+            //     alert(value);
+            // });
+
+            // Örnek 3
+            // $("#run").click(function () {
+            //     var value = $("a").prop("title","Udemy");
+            // });
+
+            // Örnek 4
+            // $("#run").click(function () {
+            //     $.getScript("../JS/lesson31.js", function () {
+            //         alert("Javascript dosyası yüklendi!");
+            //     });
+            // });
+
+            // Örnek 5
+            // $("#run").click(function () {
+            //     var data1, data2, newData;
+            //     data1 = ["Pazartesi", "Salı", "Çarşamba"];
+            //     data2 = ["Perşembe", "Cuma", "Cumartesi", "Pazar"];
+            //     newData = $.merge(data1, data2);
+            //     $("#result").html(newData.join("<br>"));
+            // });
+
+            // Örnek 6
+            // $("#run").click(function () {
+            //     var data, newData;
+            //     data = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+            //     data = $.grep(data, function (value, indexNo) {
+            //         return indexNo > 3;
+            //         return value != "Perşembe";
+            //         return indexNo != 2;
+            //     });
+            //     $("#result").html(data.join("<br>"));
+            // });
+
+            // Örnek 7
+            // İlk-son boşluk
+            $("#run").click(function () {
+                var takeData = $("#username1").val();
+                $("#username2").val($.trim(takeData));
+            });
+        });
+    </script>
+</body>
+
+</html>

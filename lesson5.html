@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 5 Event Metodları 2</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2>JQuery Eğitim Seti</h2>
+        <p>Tıkla bana JQUERY gücünü gör</p>
+        <p><input type="text" name="username" id="username"></p>
+        <div id="result">Sonuç Burada Gözükecek</div>
+        <div id="result2"></div>
+        <button type="button" id="Btn">Click Me</button>
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("p").on("click mouseleave", function () {
+            //     $("#result").css("background-color", "red");
+            // });
+
+            // Örnek 2
+            // $("p").on("click", function () {
+            //     $(this).css("color", "red");
+            // });
+            // $("#Btn").click(function () {
+            //     $("p").off("click");
+            // });
+
+            // Örnek 3
+            $("#username").change(function () {
+                $(this).css("color", "red");
+            });
+            $("#username").select(function () {
+                $("#result2").text("Beni neden seçtin ?");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.warning{
+    width: 300px;
+    padding: 15px;
+    background-color: gold;
+}
+.success{
+    width: 300px;
+    padding: 15px;
+    background-color: green;
+}
+.error{
+    width: 300px;
+    padding: 15px;
+    background-color: red;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 3 Element Seçiciler 2</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2 class="result">JQuery Eğitim Seti</h2>
+
+        <p id="test">Tıkla bana JQUERY gücünü gör</p>
+        <p>Bana da tıkla ve kolay javascript yazımını hazzını al</p>
+        <p class="result">Hani bana hani bana :)</p>
+
+        <div></div>
+        <div>
+            <p>Has kullanımı. Div benim ebeveynim</p>
+        </div>
+        <p><input type="image" src="img/icon.jpg" style="width: 75px; height: 75px;"></p>
+
+        <form>
+            <p>
+                <label>Username:</label>
+                <input type="text" id="username">
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="password" id="password">
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="email" id="email" value="example@gmail.com" disabled>
+            </p>
+            <p>
+                <label>Message:</label>
+                <textarea id="message"></textarea>
+            </p>
+            <p><input type="checkbox" id="agree">Sözleşmeyi okudum ve kubul ediyorum.</p>
+            <p>
+                <label><input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0">Bay</label>
+                <br>
+                <label><input type="radio" name="RadioGroup1" value="0" id="RadioGroup1_1">Bayan</label>
+            </p>
+            <p><input type="file"></p>
+            <p><input type="reset" value="clear"></p>
+            <p><input type="submit" value="Send"></p>
+            <p>
+                <select>
+                    <option>javascript</option>
+                    <option>Css</option>
+                    <option>HTML</option>
+                    <option>Jquery</option>
+                </select>
+            </p>
+        </form>
+
+        <ul>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Yahoo</a></li>
+            <li><a href="#">Yandex</a></li>
+            <li><a href="#">Bing</a></li>
+        </ul>
+        <button type="button">Click Me</button>
+    </div>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // $(":button").css("background-color", "red").css("width","200px");
+                // $(":submit").css("background-color", "red").css("color", "white");
+                // $(":checkbox").css("width", "25px").css("height", "25px");
+                // $(":checked").css("width", "35px").css("height", "35px");
+                // $("p:contains(Hani)").css("color", "red").css("font-size", "30px");
+                // $("a:not(':contains(Yandex)')").css("color", "red");
+                // $("p:not(#test)").css("color", "red");
+                // $(":disabled").css("color", "red");
+                // $(":empty").css("background-color", "red").css("width", "300px").css("height", "35px");
+                // $(":focus").css("background-color", "red");
+                // $(":file").css("background-color", "red");
+                // $("form:has(p)").css("background-color", "red");
+                // $(":header").css("background-color", "red");
+                // $(":image").css("width", "130px").css("height", "130px");
+                // $(":input").css("background-color", "red");
+                // $(":password").css("background-color", "red");
+                // $(":radio").css("width", "50px").css("height", "50px");
+                // $(":reset").css("background-color", "red");
+                // $(":selected").css("background-color", "red");
+                // $(":text").css("background-color", "red");
+                // $(":visible").css("background-color", "red");
+                // $("ul li:last").css("background-color", "red");
+                // $("ul li:even").css("background-color", "red");
+                // $("ul li:odd").css("background-color", "red");
+                // $(".result, #test, a").css("background-color", "red");
+            });
+        });
+    </script>
+</body>
+
+</html>

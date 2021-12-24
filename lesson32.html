@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 32 When Then Kullanımı ve Küçük Uygulamalar</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson32.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <!-- Örnek 1 -->
+    <!-- <ul>
+        <li>List 1 row 1</li>
+        <li>List 1 row 2</li>
+        <li>List 1 row 3</li>
+        <li>List 1 row 4</li>
+        <li>List 1 row 5</li>
+    </ul>
+    <ul>
+        <li>List 2 row 1</li>
+        <li>List 2 row 2</li>
+    </ul>
+    <ul>
+        <li>List 3 row 1</li>
+        <li>List 3 row 2</li>
+        <li>List 3 row 3</li>
+        <li>List 3 row 4</li>
+    </ul>
+    <div style="clear: left;"></div>
+    <button id="run" type="button" class="btn btn-dark">Click</button> -->
+
+    <!-- Örnek 2,3 -->
+    <!-- <div>İlk div</div>
+    <div>İkinci div</div>
+    <button id="run" type="button" class="btn btn-dark">Click</button> -->
+
+    <!-- Örnek 4 -->
+    <div></div>
+    <button id="run" type="button" class="btn btn-dark">Click</button>
+
+    <!-- Örnek 5 -->
+    <!-- <form>
+        <input type="text" value="Ahmet">
+        <input type="text" value="Mehmet">
+        <input type="text" value="Ali">
+        <input type="text" value="Haydar">
+        <input type="text" value="Arda">
+        <input type="text" value="Ayşe">
+        <input type="text" value="Gizem">
+        <input type="text" value="Beyza">
+        <input type="text" value="Sevim">
+        <input type="text" value="Elif">
+    </form>
+    <div></div>
+    <button id="run" type="button" class="btn btn-dark">Click</button> -->
+    <script>
+        $(function () {
+            // Örnek 1
+            var maxValue = 0;
+            $("#run").click(function () {
+                $("ul").each(function () {
+                    maxValue = Math.max($(this).height(), maxValue);
+                });
+                $("ul").height(maxValue);
+            });
+
+            // Örnek 2
+            // var maxValue = 0;
+            // $("#run").click(function () {
+            //     $("div").replaceWith("<p>Divleri değiştirdim</p>");
+            // });
+
+            // Örnek 3
+            // var maxValue = 0;
+            // $("#run").click(function () {
+            //     $("div").replaceWith(function () {
+            //         return "<p>" + $(this).html() + "</p>";
+            //     });
+            // });
+
+            // Örnek 4
+            var maxValue = 0;
+            $("#run").click(function () {
+                $.when($.ajax("../JS/lesson32.js").then(Nice, Wrong));
+                function Nice() {
+                    $("div").text("İşlem Başarılı!");
+                }
+                function Wrong() {
+                    $("div").text("İşlem Başarısız!");
+                }
+            });
+
+            // Örnek 5
+            // var maxValue = 0;
+            // var allValue = [];
+            // $("#run").click(function () {
+            //     $("input:text").each(function () {
+            //         allValue.push($(this).val());
+            //     });
+            //     $("div").html(allValue.join("<br>"));
+            // });
+        });
+    </script>
+</body>
+
+</html>

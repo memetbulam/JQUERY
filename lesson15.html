@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 15 HTML İçeriklerini Değiştirme</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <!-- Örnek 1 -->
+    <!-- <p>
+        <a href="https://www.youtube.com" target="_blank" title="Youtube">Youtube</a>
+    </p>
+    <p id="result1">Jquery ile içeriklere müdahale</p>
+    <p id="result2">İçerikler değişecek</p>
+    <p>İnput Alanı:<input type="text" id="result3" value="Ahmet HELVACI"></p>
+    <button type="button" id="btn">Show Attribute</button>
+    <button type="button" id="btn1">Show Text</button>
+    <button type="button" id="btn2">Show Html</button>
+    <button type="button" id="btn3">Show Val</button> -->
+
+    <!-- Örnek 2, 3 -->
+    <p id="result2"><b>İçerikler</b> <i>değişecek</i></p>
+    <p>İnput Alanı:<input type="text" id="result3" value="Ahmet HELVACI"></p>
+    <p>
+        <a href="https://www.youtube.com" target="_blank" title="Youtube">Youtube</a>
+    </p>
+    <button type="button" id="btn">Show Attribute</button>
+    <button type="button" id="btnmulti">Show Multi Attribute</button>
+    <button type="button" id="btncallback">Show Callback Attribute</button>
+    <button type="button" id="btn1">Show Text</button>
+
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#btn").click(function () {
+            //     alert($("a").attr("href"));
+            // });
+            // $("#btn1").click(function () {
+            //     $("#result1").text("Hello JQuery");
+            // });
+            // $("#btn2").click(function () {
+            //     $("#result2").html("<b>Hello</b><br> JQuery");
+            // });
+            // $("#btn3").click(function () {
+            //     $("#result3").val("Mehmet BULAM");
+            // });
+
+            // Örnek 2
+            // $("#btn1").click(function () {
+            //     $("#result2").html(function (x, Text) {
+            //         return "Eski html: " + Text + ": Yeni html: Merhaba <b>JQuery</b> (index: " + x + ")";
+            //     });
+            // });
+
+            // Örnek 3
+            $("#btn").click(function () {
+                $("a").attr("title", "YoutubeTR");
+            })
+            $("#btnmulti").click(function () {
+                $("a").text("Udemy");
+                $("a").attr({
+                    "title": "Udemy",
+                    "href": "https://www.udemy.com/"
+                });
+            });
+            $("#btncallback").click(function () {
+                $("a").attr("href", function (x, getValue) {
+                    return getValue + "/channel/UC1tEaR6yZaTztdZOybBPNew";
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

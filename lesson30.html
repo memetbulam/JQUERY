@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 30 Efekt Metodları</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson30.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <button class="btn btn-dark" id="run">Run Animation</button>
+    <button class="btn btn-dark" id="stop">Stop/finish</button>
+    <div class="box"></div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#run").click(function () {
+            //     var div = $("div");
+            //     div.animate({ height: 300 }, 1500);
+            //     div.animate({ width: 300 }, 1500);
+            //     div.animate({ height: 100 }, 1500);
+            //     div.animate({ width: 100 }, 1500);
+            // });
+            // $("#stop").click(function () {
+            //     $("div").clearQueue();
+            // });
+
+            // Örnek 2
+            // $("#run").click(function () {
+            //     var div = $("div");
+            //     div.animate({ height: 300 }, 1500);
+            //     div.animate({ width: 300 }, 1500);
+            // });
+            // $("#stop").click(function () {
+            //     $("div").finish();
+            // });
+
+            // Örnek 3
+            // $("#run").click(function () {
+            //     $("div").delay(2000).hide(1000);
+            // });
+
+            // Örnek 4
+            // $("#run").click(function () {
+            //     var div = $("div");
+            //     div.animate({ height: 300 }, 2000);
+            //     div.animate({ width: 300 }, 2000);
+            //     div.queue(function () {
+            //         div.css("background-color", "darkkhaki");
+            //         div.dequeue();
+            //     });
+            //     div.delay(1000);
+            //     div.animate({ height: 100 }, 2000);
+            //     div.animate({ width: 100 }, 2000);
+            // });
+        });
+    </script>
+</body>
+
+</html>

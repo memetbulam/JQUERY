@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 29 Properties ve Filtreleme</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson29.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Örnek 1,2 -->
+    <!-- <h2>Welcome to My JQuery Lesson</h2>
+    <button type="button" class="btn btn-primary">Insert/show Data</button>
+    <div id="result"></div> -->
+
+    <!-- Örnek 3 -->
+    <!-- <button type="button" class="btn btn-dark" id="disable">True(Devre Dışı)</button>
+    <button type="button" class="btn btn-dark" id="enable">False(Etkinleştir)</button>
+    <button type="button" class="btn btn-dark" id="run">Run</button>
+    <div class="box"></div> -->
+
+    <!-- Örnek 4... -->
+    <!-- <button type="button" class="btn btn-dark" id="run">Run</button>
+    <div id="result"></div> -->
+
+    <!-- Örnek 5 -->
+    <input id="search" type="text" placeholder="Search.." style="margin: 5px;">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>Ahmet</td>
+                <td>Helvacı</td>
+                <td>ahmethelvaci@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Mehmet</td>
+                <td>Bulam</td>
+                <td>mehmetbulam@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Sevim</td>
+                <td>Tokuz</td>
+                <td>sevimtokuz@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Haydar</td>
+                <td>Candır</td>
+                <td>haydarcandır@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Mansur</td>
+                <td>Yavaş</td>
+                <td>mansuryavaş@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul id="list" class="mt-5">
+        <li>Angular JS</li>
+        <li>React JS</li>
+        <li>Vue JS</li>
+        <li>Node JS</li>
+    </ul>
+
+    <div id="div" class="mt-5">
+        <p>Ben bir paragrafım</p>
+        <div>div içindeki bir div elementiyim</div>
+        <button>ben bir butonum</button>
+        <button>tıkla</button>
+        <p>paragraf</p>
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("button").click(function () {
+            //     $("#result").text("JQuery Version: "+$().jquery);
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $("#result").text($().jquery); 
+            // });
+
+            // Örnek 3
+            // $("#disable").click(function () {
+            //     jQuery.fx.off = true;
+            // });
+            // $("#enable").click(function () {
+            //     jQuery.fx.off = false;
+            // });
+            // $("#run").click(function () {
+            //     $("div").toggle("slow");
+            // });
+
+            // Örnek 4
+            // $("#run").click(function () {
+            //     $("#result").html("Bu browser XMLHttpRequest nesnesini oluşturabilir mi ? <b>" + jQuery.support.ajax + "</b>");
+            // });
+
+            // Örnek 5
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#tbody tr").filter(function () {
+                    console.log($(this).text());
+                    var x = $(this).text().toLowerCase().indexOf(value);
+                    var y = x > -1;
+                    $(this).toggle(y);
+                });
+            });
+
+            // Örnek 6
+            // $("#search").on("keyup", function () {
+            //     var value = $(this).val().toLowerCase();
+            //     $("#list li").filter(function () {
+            //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            //     });
+            // });
+
+            // Örnek 7
+            // $("#search").on("keyup", function () {
+            //     var value = $(this).val().toLowerCase();
+            //     $("#div *").filter(function () {
+            //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            //     });
+            // });
+        });
+    </script>
+</body>
+
+</html>

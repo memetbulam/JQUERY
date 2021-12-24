@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 23 first, last, eq, filter, not vs metodlar</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson23.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Örnek 1 -->
+    <!-- <p>JQuery Traversing - Filtering</p>
+    <div style="border: 1px solid black;padding: 10px;">
+        <p>Divin içindeki ilk paragraf</p>
+        <p>Divin içindeki ikinci ve son paragraf</p>
+    </div>
+    <br>
+    <div style="border: 1px solid black;padding: 10px;">
+        <p>İkinci divin içindeki ilk paragraf</p>
+        <p>İkinci divin içindeki ikinci ve son paragraf</p>
+    </div>
+    <br>
+    <div style="border: 1px solid black;padding: 10px;">
+        <p>Üçüncü divin içindeki ilk paragraf</p>
+        <p>Üçüncü divin içindeki ikinci ve son paragraf</p>
+    </div> -->
+
+    <!-- Örnek 2,3,4,5 -->
+    <!-- <h2>Welcome to My JQuery Lesson</h2>
+    <p>Birinci Paragraf</p>
+    <p class="demo">İkinci Paragraf</p>
+    <p class="demo">Üçüncü Paragraf</p>
+    <p>Dördüncü Paragraf</p>
+    <p>Beşinci Paragraf</p> -->
+
+    <!-- Örnek 6 -->
+    <div class="ancestors">
+        <div style="width: 500px;">div (great - grandparent)
+            <ul>ul (second ancestor - second grandparent)
+                <ul>ul (first ancestor - first grandparent)
+                    <li>li (direct parent)
+                        <span>span</span>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div id="ornek7div"><em>Welcome to My JQuery Lesson</em></div>
+
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("div").first().css("background-color", "darkkhaki");
+            // $("div").last().css("background-color", "darkkhaki");
+
+            // Örnek 2
+            // $("p").eq(3).css("background-color", "darkkhaki");
+
+            // Örnek 3
+            // $("p").filter(".demo").css("background-color", "darkkhaki");
+
+            // Örnek 4
+            // $("p").not(".demo").css("background-color", "darkkhaki");
+
+            // Örnek 5
+            // $("h2").add("p.demo").css("background-color", "darkkhaki");
+
+            // Örnek 6
+            // $("span").closest("ul").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 7
+            // div altındaki tüm herşeye ulaşır
+            $("#ornek7div").contents().filter("em").wrap("<b/>");
+        });
+    </script>
+</body>
+
+</html>

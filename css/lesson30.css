@@ -1,0 +1,9 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+}

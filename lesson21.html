@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 21 Traversing</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson21.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <!-- Örnek 1,2,3,4 -->
+    <!-- <div class="ancestors">
+        <div style="width: 500px;">div (great-grandparent)
+            <ul> ul (grandparent)
+                <li>li (direct parent)
+                    <span>Span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width: 500px;">div (grandparent)
+            <p>p (direct parent)
+                <span>Span</span>
+            </p>
+        </div>
+    </div> -->
+
+    <!-- Örnek 5, ... -->
+    <div class="descendants">div (mevcut element)
+        <p class="first">p (Child)
+            <span>Span (grandchild)</span>
+        </p>
+        <p class="second">p (Child)
+            <span>Span (grandchild)</span>
+        </p>
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("span").parent().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 2
+            // $("span").parents().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 3
+            // $("span").parents("ul").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 4
+            // $("span").parentsUntil("div").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 5
+            // $("div").children().css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 6
+            // $("div").children("p.second").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 7
+            // $("div").find("span").css({
+            //     "color": "red",
+            //     "border": "2px solid red",
+            //     "font-weight": "bold"
+            // });
+
+            // Örnek 8
+            $("div").find("*").css({
+                "color": "red",
+                "border": "2px solid red",
+                "font-weight": "bold"
+            });
+        });
+    </script>
+</body>
+
+</html>

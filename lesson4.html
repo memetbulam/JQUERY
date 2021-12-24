@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 4 Event Metodları</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2>JQuery Eğitim Seti</h2>
+        <p>Tıkla bana JQUERY gücünü gör</p>
+        <p>Bana da tıkla ve kolay javascript yazımını hazzını al</p>
+        <div class="row mb-3">
+            <div class="col-2">
+                Username:
+            </div>
+            <div class="col-3">
+                <input type="text" name="username" id="username">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                Email:
+            </div>
+            <div class="col-3">
+                <input type="email" name="email" id="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                Key Press Sayısı:
+            </div>
+            <div class="col-1">
+                <span>0</span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script>
+        $(function () {
+            $(function () {
+                // Örnek 1
+                // $("p").click(function () {
+                //     $(this).hide();
+                // });
+
+                // Örnek 2
+                // $("p").dblclick(function () {
+                //     $(this).hide();
+                // });
+
+                // Örnek 3
+                // $("p").mouseenter(function () {
+                //     alert("Paragraf alanına GİRDİN!");
+                // });
+
+                // Örnek 4
+                // $("p").mouseleave(function () {
+                //     alert("Paragraf alanından ÇIKTIN!");
+                // });
+
+                // Örnek 5
+                // $("p").mousedown(function () {
+                //     $(this).css("color", "red");
+                // });
+                // $("p").mouseup(function () {
+                //     $(this).css("color", "blue");
+                // });
+
+                // Örnek 6
+                // mouseenter, mouseleave
+                // $("p").hover(function () {
+                //     $(this).css("color", "red");
+                // }, function () {
+                //     $(this).css("color", "blue");
+                // });
+
+                // Örnek 7
+                // $("input").focus(function () {
+                //     $(this).css("background-color", "red");
+                // });
+                // $("input").blur(function () {
+                //     $(this).css("background-color", "blue");
+                // });
+
+                // Örnek 8
+                // $("input").keydown(function () {
+                //     $(this).css("background-color", "red").css("color", "white");
+                // });
+                // $("input").keyup(function () {
+                //     $(this).css("background-color", "blue").css("color", "white");
+                // });
+
+                // Örnek 9
+                // var i = 0;
+                // $("input").keypress(function () {
+                //     $("span").text(i += 1);
+                // });
+
+                // Örnek 10
+                // Birden fazla
+                $("p").on({
+                    mouseenter: function () {
+                        $(this).css("background-color", "red").css("color", "white");
+                    },
+                    mouseleave: function () {
+                        $(this).css("background-color", "blue").css("color", "white");
+                    },
+                    click: function () {
+                        $(this).css("background-color", "green").css("color", "white");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

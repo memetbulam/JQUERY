@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 28 Çeşitli Metodlar</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson28.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <p>JQuery ile çeşitli metodlar</p>
+    <ul>
+        <li>Angular JS</li>
+        <li>React JS</li>
+        <li>Vue JS</li>
+        <li>Node JS</li>
+    </ul>
+    <button type="button" class="btn btn-primary" id="btn1">Insert/show Data</button>
+    <button type="button" class="btn btn-primary" id="btn2">Remove Data</button>
+    <div id="result"></div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#btn1").click(function () {
+            //     $("#result").data("getData", "Hello JQuery");
+            //     alert($("#result").data("getData"));
+            // });
+            // $("#btn2").click(function () {
+            //     $("#result").removeData("getData");
+            //     alert($("#result").data("getData"));
+            // });
+
+            // Örnek 2
+            // $("#btn1").click(function () {
+            //     var x = $("p").get(0);
+            //     $("div").text(x.nodeName + ": " + x.innerHTML);
+            // });
+
+            // Örnek 3
+            // $("li").click(function () {
+            //     if ($(this).index() == 2)
+            //         $("#result").html("<b>BULDUN!!!</b>");
+            //     else
+            //         $("#result").html("<b>Bulamadın!</b>");
+            // });
+
+            // Örnek 4
+            // $.noConflict();
+            // jQuery(function () {
+            //     jQuery("#btn1").click(function () {
+            //         jQuery("div").text("Jquery dolar işareti olmadan da çalışıyor.");
+            //     });
+            // });
+
+
+            // Örnek 5
+            // $.noConflict();
+            // jQuery(function ($) {
+            //     $("#btn1").click(function () {
+            //         $("div").text("Jquery dolar işareti olmadan da çalışıyor.");
+            //     });
+            // });
+
+            // Örnek 6
+            // var AhmetHELVACI = $.noConflict();
+            // AhmetHELVACI(function () {
+            //     AhmetHELVACI("#btn1").click(function () {
+            //         AhmetHELVACI("div").text("Jquery dolar işareti olmadan da çalışıyor.");
+            //     });
+            // });
+
+            // Örnek 7
+            // var AhmetHELVACI = $.noConflict();
+            // AhmetHELVACI(function () {
+            //     AhmetHELVACI("#btn1").click(function () {
+            //         alert(AhmetHELVACI("li").length);
+            //     });
+            // });
+
+            // Örnek 8
+            $("#btn1").click(function () {
+                var i, x;
+                x = $("li").toArray();
+                for (i = 0; i < x.length; i++) {
+                    alert(x[i].innerHTML);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

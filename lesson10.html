@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 10 show ve hide efekti</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>JQuery ile event kullanımları</p>
+    <button type="button" class="btn btn-info" id="hide">Hide</button>
+    <button type="button" class="btn btn-info" id="show">Show</button>
+    <button type="button" class="btn btn-info" id="onoff">Toggle</button>
+    <script>
+        $(function () {
+            // Örnek 1
+            // Slow, fast
+            $("#hide").click(function () {
+                $("p").hide(1000);
+            });
+            $("#show").click(function () {
+                $("p").show(1000);
+            });
+            $("#onoff").click(function () {
+                $("p").toggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

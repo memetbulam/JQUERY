@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 19 Html ve Css Müdahalesi</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson19.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>JQuery diğer html/css komutları</p>
+    <p>JQuery unuttuğum komutlar</p><br><br>
+    <button id="appendTo">appendTo Click</button>
+    <button id="prependTo">prependTo Click</button>
+    <button id="insertAfter">insertAfter Click</button>
+    <button id="insertBefore">insertBefore Click</button>
+    <button id="btnClone">Clone Click</button>
+    <button id="btndetach">Detach Click</button>
+    <button id="btnHasClass">Has Class Click</button>
+
+    <br><br>
+    <script>
+        $(function () {
+            $("#appendTo").click(function () {
+                $("<span> Hello JQuery appendTo</span>").appendTo("p");
+            });
+            $("#prependTo").click(function () {
+                $("<span> Hello JQuery</span>").prependTo("p");
+            });
+            $("#insertAfter").click(function () {
+                $("<span> Hello JQuery</span>").insertAfter("p");
+            });
+            $("#insertBefore").click(function () {
+                $("<span> Hello JQuery</span>").insertBefore("p");
+            });
+            $("#btnClone").click(function () {
+                $("p").clone().appendTo("body");
+            });
+            $("#btndetach").click(function () {
+                $("p").detach();
+            });
+            $("#btnHasClass").click(function () {
+                if ($("p").hasClass("red")) {
+                    alert("Böyle bir class mevcut");
+                } else {
+                    alert("böyle bir class yok");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 20 Html ve Css Müdahalesi 2</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p id="result">JQuery diğer html/css komutları</p>
+    <div style="border: 1px solid blue;width: 70%;left: 10px;top: 50px;position: absolute;">
+        <div style="border: 1px solid blue;margin: 50px;background-color: darkkhaki;">
+            <p id="result1">JQuery unuttuğum komutlar</p>
+        </div>
+    </div>
+    <div id="focusdiv" style="margin-top: 150px;"></div>
+    <p id="removeStyle" style="font-size: 20px; font-weight: bold;">Style kaldırılacak</p>
+    <div id="scroldiv" style="border: 1px solid black;width: 200px; height: 130px;overflow: auto;">
+        JQuery diğerhtml/cssJQuerydiğerhtml/csskomutlarıJQuerydiğerhtml/css komutları
+        komutlarıJQuery diğer html/css komutlarıJQuery diğer html/css komutları JQuery diğer html/css komutları
+    </div>
+    <div style="background-color: darkkhaki;">
+        <p id="demo">JQuery diğerhtml/cssJQuerydiğerhtml/csskomutlarıJQuerydiğerhtml/css komutları
+            komutlarıJQuery diğer html/css komutlarıJQuery diğer html/css komutları JQuery diğer html/css komutları</p>
+    </div>
+    <br>
+    <div style="margin-top: 10px;">
+        <button type="button" id="btnoffset">offset</button>
+        <button type="button" id="btnposition">position</button>
+        <button type="button" id="btnoffsetParent">offsetParent</button>
+        <button type="button" id="btnprop">prop</button>
+        <button type="button" id="btnremoveAttr">remove Attr</button>
+        <button type="button" id="btnreplaceall">replaceall</button>
+        <button type="button" id="btnreplaceWith">replace With</button>
+        <button type="button" id="btnscrolTopleft">scrolTop</button>
+        <button type="button" id="btnunwrap">Unwrap</button>
+        <button type="button" id="btnwrap">wrap</button>
+        <button type="button" id="btnwrapall">wrap all</button>
+        <button type="button" id="btnwrapinner">wrap inner</button>
+    </div>
+    <script>
+        $(function () {
+            $("#btnoffset").click(function () {
+                var x = $("#result").offset();
+                alert("Üst: " + x.top + " sol: " + x.left);
+            });
+            $("#btnposition").click(function () {
+                var y = $("#result").position();
+                alert("Üst: " + y.top + " sol: " + y.left);
+            });
+            $("#btnoffsetParent").click(function () {
+                $("#result1").offsetParent().css("background-color", "darkolivegreen");
+            });
+            $("#btnprop").click(function () {
+                var $x = $("#focusdiv");
+                $x.prop("color", "red");
+                $x.append("Buraya odaklan: " + $x.prop("color"));
+                $x.removeProp("color");
+                $x.append("<br>Buraya odaklan: " + $x.prop("color"));
+            });
+            $("#btnremoveAttr").click(function () {
+                $("#removeStyle").removeAttr("style");
+            });
+            $("#btnreplaceall").click(function () {
+                // html elementleriyle değiştirir
+                $("<h2>Merhaba JQuery</h2>").replaceAll("p");
+            });
+            $("#btnreplaceWith").click(function () {
+                // Sadece içerik
+                $("p:last").replaceWith("Hello JQuery");
+            });
+            $("#btnscrolTopleft").click(function () {
+                alert("Scrol Top: " + $("#scroldiv").scrollTop() + "px");
+                alert("Scrol Left: " + $("#scroldiv").scrollLeft() + "px");
+            });
+            $("#btnunwrap").click(function () {
+                // seçilen elementin ebeveynini kaldırır
+                $("#demo").unwrap();
+            });
+            $("#btnwrap").click(function () {
+                $("p").wrap("<div></div>");
+            });
+            $("#btnwrapall").click(function () {
+                // tek div
+                $("p").wrapAll("<div></div>");
+            });
+            $("#btnwrapinner").click(function () {
+                $("p").wrapInner("<b></b>");
+            });
+        });
+    </script>
+</body>
+
+</html>

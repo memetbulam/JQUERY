@@ -1,0 +1,16 @@
+div{
+    border: 1px solid black;
+    background-color: darkkhaki;
+    padding: 15px;
+}
+.color{
+    color: green;
+    font-size: 20px;
+}
+.red{
+    color: red;
+}
+.important{
+    font-weight: bold;
+    font-size: xx-large;
+}

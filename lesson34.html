@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 34 JQuery Plugin (Eklenti) Kullanımı - Colorbox</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/colorbox.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <p><a class="group1" href="img/1.jpg" title="Me and my grandfather on the Ohoopee.">Photo 1</a></p>
+    <p><a class="group1" href="img/2.jpg" title="On the Ohoopee as a child">Photo 2</a></p>
+    <p><a class="group1" href="img/3.jpg" title="On the Ohoopee as an adult">Photo 3</a></p>
+
+    <script src="JS/jquery.colorbox-min.js"></script>
+    <script>
+        $(function () {
+            $(".group1").colorbox({ rel: "group1", transition: "fade", slideshow: true });
+        });
+    </script>
+</body>
+
+</html>

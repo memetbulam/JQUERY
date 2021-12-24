@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 11 fade efektleri</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson11.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btn btn-secondary mb-3">Click</button>
+        </div>
+    </div>
+    <div class="row ml-3">
+        <div class="col-3">
+            <div id="div1" class="box mb-2">JQuery</div>
+        </div>
+        <div class="col-3">
+            <div id="div2" class="box mb-2">ile</div>
+        </div>
+        <div class="col-3">
+            <div id="div3" class="box mb-2">Efektler</div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("button").click(function () {
+            //     $("#div1").fadeIn();
+            //     $("#div2").fadeIn("slow");
+            //     $("#div3").fadeIn(3000);
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $("#div1").fadeOut();
+            //     $("#div2").fadeOut("slow");
+            //     $("#div3").fadeOut(3000);
+            // });
+
+            // Örnek 3
+            // $("button").click(function () {
+            //     $("#div1").fadeToggle();
+            //     $("#div2").fadeToggle("slow");
+            //     $("#div3").fadeToggle(3000);
+            // });
+
+            // Örnek 4
+            // $("button").click(function () {
+            //     $("#div1").fadeOut(2500, function () {
+            //         $(this).fadeIn(2500, function () {
+            //             alert("fadeOut ve fadeIn işlemi tamamlandı!");
+            //         });
+            //     });
+            // });
+
+            // Örnek 5
+            // opacity 0-1
+            $("button").click(function () {
+                $("#div1").fadeTo(1500, 0.5);
+                $("#div1").on("mouseover", function () {
+                    $(this).fadeTo(1500, 1);
+                });
+                $("#div1").on("mouseleave", function () {
+                    $(this).fadeTo(1500, 0.5);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 12 Slide Efektleri ve Animate Kullanımı</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson12.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Örnek 1-4 -->
+    <h2>JQuery Eğitim Seti</h2>
+    <div id="divClick">Click</div>
+    <div id="panel">Hello JQuery Slide Effect</div>
+
+    <!-- Animasyon -->
+    <!-- <h2>JQuery Eğitim Seti</h2>
+    <button type="button">Start</button><br><br>
+    <div class="box" id="box">JQuery</div> -->
+    <script>
+        // Örnek 1-4
+        $(function () {
+            // Örnek 1
+            // $("#divClick").click(function () {
+            //     $("#panel").slideDown("slow");
+            // });
+
+            // Örnek 2
+            // $("#divClick").click(function () {
+            //     $("#panel").slideUp("slow");
+            // });
+
+            // Örnek 3
+            // $("#divClick").click(function () {
+            //     $("#panel").slideToggle("slow");
+            // });
+
+            // Örnek 4
+            // $("#divClick").click(function () {
+            //     $("#panel").slideUp("slow", function () {
+            //         $(this).slideDown("slow", function () {
+            //             $(this).text("İşlem tamamlandı!");
+            //         });
+            //     });
+            // });
+        });
+
+        // Animasyon
+        // $(function () {
+            // Örnek 1
+            // $("button").click(function () {
+            //     var div = $("#box");
+            //     div.animate({ height: '300px', opacity: '0.4' }, 1200);
+            //     div.animate({ width: '300px', opacity: '0.8' }, 1200);
+            //     div.animate({ height: '100px', opacity: '0.4' }, 1200);
+            //     div.animate({ width: '100px', opacity: '0.8' }, 1200);
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     var div = $("#box");
+            //     div.animate({ left: '200px' }, "slow");
+            //     div.animate({ width: '180px' }, "slow");
+            //     div.animate({ fontSize: '3em' }, "slow");
+            // });
+        // });
+    </script>
+</body>
+
+</html>

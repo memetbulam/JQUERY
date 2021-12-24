@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 24 each, end, has, is, offsetParent ve slice metodları</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson24.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- Örnek 1,2,3,4 -->
+    <!-- <ul class="first">
+        <li class="foo">list item 1</li>
+        <li>list item 2</li>
+        <li class="bar">list item 3</li>
+    </ul>
+    <ul class="second">
+        <li class="foo">list item 4</li>
+        <li>list item 5</li>
+        <li class="bar">list item 6</li>
+    </ul>
+    <p>My <span>name</span>is Ahmet.</p>
+    <p>I live in<span>Turkey</span>.</p>
+    <p>My best friend is Mehmet</p>
+
+    <div>
+        <p>Ebeveynim(parent) bir div elementi</p>
+    </div> -->
+
+    <!-- Örnek 5 -->
+    <div style="border: 1px solid black;width: 70%;position: absolute;left: 10px;top: 220px;">
+        <div style="border: 1px solid black;margin: 50px;background-color: green;">
+            <p>İki div içerisinde paragraf</p>
+        </div>
+    </div>
+
+    <ul class="first">
+        <li>list item 1 (index: 0)</li>
+        <li>list item 2 (index: 1)</li>
+        <li>list item 3 (index: 2)</li>
+        <li>list item 4 (index: 3)</li>
+        <li>list item 5 (index: 4)</li>
+        <li>list item 6 (index: 5)</li>
+    </ul>
+
+    <button type="button" class="btn btn-dark">Click</button>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("button").click(function () {
+            //     $("li").each(function () {
+            //         alert($(this).text());
+            //     });
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $("ul.first").find(".foo").css("background-color", "darkkhaki").end().find(".bar").css("background-color", "darkgoldenrod");
+            // });
+
+            // Örnek 3
+            // $("button").click(function () {
+            //     $("p").has("span").css("background-color", "darkkhaki");
+            // });
+
+            // Örnek 4
+            // $("button").click(function () {
+            //     if ($("p").parent().is("div")) {
+            //         alert("Paragrafın ebeveyni bir div doğru");
+            //     }
+            // });
+
+            // Örnek 5
+            // $("button").click(function () {
+            //     $("p").offsetParent().css("background-color", "black");
+            // });
+
+            // Örnek 6
+            $("button").click(function () {
+                $("li").slice(2,5).css("color", "red");
+            });
+        });
+    </script>
+</body>
+
+</html>

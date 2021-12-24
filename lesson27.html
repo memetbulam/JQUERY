@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 27 AJAX Kullanımı 3</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson27.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+
+    <form>
+        İsim:<input type="text" name="firstName" value="Ahmet">
+        Soyad:<input type="text" name="lastName" value="HELVACI">
+    </form>
+    <button type="button" class="btn btn-dark">Click</button>
+
+    <div id="wait" class="loading">
+        <img src="img/wait.gif" width="64" height="64" alt="Wait" />
+        <br>Loading...
+    </div>
+    <div id="result"></div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $(document).ajaxStart(function () {
+            //     $("#wait").css("display", "block");
+            // });
+            // $(document).ajaxComplete(function () {
+            //     $("#wait").css("display", "none");
+            // });
+            // $(document).ajaxSuccess(function () {
+            //     $("#result").append("<p><b>AJAX isteği başarlı!</b></p>");
+            // });
+            // $(document).ajaxSend(function () {
+            //     $("#result").append("<p><b>lesson27.php dosyası isteniyor...</b></p>");
+            // });
+            // $(document).ajaxStop(function () {
+            //     $("#result").append("<p><b>Tüm AJAX işlemleri tamamlandı!</b></p>");
+            // });
+            // $(document).ajaxError(function () {
+            //     $("#result").append("<p><b>AJAX işlemi tamamlanamadı!</b></p>");
+            // });
+            // $("button").click(function () {
+            //     $("#result").load("../php/lesson27.php");
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $("#result").text($("form").serialize());
+            // });
+
+            // Örnek 3
+            $("button").click(function () {
+                var x = $("form").serializeArray();
+                $.each(x, function (i, alan) {
+                    $("#result").append(alan.name + ": " + alan.value + "<br>");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

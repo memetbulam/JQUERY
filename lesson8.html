@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 8 Event Property</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2>JQuery Eğitim Seti</h2>
+        <p>JQuery ile event kullanımları</p>
+        <p>JQuery ile event özellikleri</p>
+        <a href="https://www.youtube.com/">Youtube</a>
+        <div id="seconddiv" style="border: 2px solid black;background-color: darkolivegreen;">
+            <p>Bu bir paragraf</p>
+            <button type="button" class="btn btn-dark">Click Me</button>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("h2, p").click(function (event) {
+            //     alert(event.currentTarget === this);
+            // });
+
+            // Örnek 2
+            // $("p").each(function (i) {
+            //     $(this).on("click", { x: i }, function (event) {
+            //         alert($(this).index() + ". paragraf + " + event.data.x + " veri");
+            //     });
+            // });
+
+            // Örnek 3
+            // $("#seconddiv").on("click", "button", function (event) {
+            //     $(event.delegateTarget).css("background-color", "red");
+            // });
+
+            // Örnek 4
+            // $("a").click(function (event) {
+            //     event.preventDefault();
+            //     alert(event.isDefaultPrevented());
+            // });
+
+            // Örnek 5
+            // $("#seconddiv").click(function (event) {
+            //     event.stopPropagation();
+            //     alert(event.isPropagationStopped());
+            // });
+
+            // Örnek 6
+            // $("#seconddiv").click(function (event) {
+            //     event.stopImmediatePropagation();
+            //     alert(event.isImmediatePropagationStopped());
+            // });
+
+            // Örnek 7
+            // $("p").on("custom.someNamespace", function (event) {
+            //     alert(event.namespace);
+            // });
+            // $("p").click(function (event) {
+            //     $(this).trigger("custom.someNamespace");
+            // });
+
+            // Örnek 8
+            // $(document).mouseover(function (event) {
+            //     $("#seconddiv").text("X: " + event.pageX + ", Y: " + event.pageY);
+            // });
+
+            // Örnek 9
+            // Engelleme
+            // $("a").click(function (event) {
+            //     event.preventDefault();
+            // });
+        });
+    </script>
+</body>
+
+</html>

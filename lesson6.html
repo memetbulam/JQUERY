@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 6 Event Metodları 3</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2>JQuery Eğitim Seti</h2>
+        <p>En: <span id="width"></span></p>
+        <p>Boy: <span id="height"></span></p>
+        <input type="text" value="Hello JQuery"><span id="result"></span><br><br>
+        <button type="button" id="Btn">Click Button</button>
+        <a href="#" id="link">Click Link</a><br><br>
+        <div style="border: 1px solid black;width: 150px; height: 200px; overflow: scroll;">JQuery JQuery JQuery JQuery
+            JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery
+            JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery JQuery </div>
+        <p>Scroll çubuğu <span id="scroll">0</span> kez kaydırdın.</p>
+        <form action="">
+            <p>Username: <input type="text" name="username"></p>
+            <p>Password: <input type="password" name="password"></p>
+            <input type="submit" value="Submit Button">
+        </form>
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("p").one("click", function () {
+            //     alert("Bir kez çalışırım");
+            // });
+
+            // Örnek 2
+            // $("p").one("click", function () {
+            //     $(this).animate({ fontSize: "+=6px" });
+            // });
+
+            // Örnek 3
+            // var objPerson = {
+            //     name: "Ahmet",
+            //     age: 35,
+            //     test: function () {
+            //         $("p").text("İsim: " + this.name + " Yaş: " + this.age);
+            //     }
+            // };
+            // $("#Btn").click($.proxy(objPerson, "test"));
+
+            // Örnek 4
+            // $(function () {
+            //     var w, h;
+            //     w = $(window).width();
+            //     h = $(window).height();
+            //     $("#width").text(w);
+            //     $("#height").text(h);
+            //     $(window).resize(function () {
+            //         w = $(window).width();
+            //         h = $(window).height();
+            //         $("#width").text(w);
+            //         $("#height").text(h);
+            //     });
+            // })
+
+            // Örnek 5
+            // $(function () {
+            //     var x = 0;
+            //     $("div").scroll(function () {
+            //         $("#scroll").text(x += 1);
+            //     });
+            // });
+
+            // Örnek 6
+            // $(function () {
+            //     $("form").submit(function () {
+            //         alert("Form submit edildi");
+            //     });
+            // });
+
+            // Örnek 7
+            // $(function () {
+            //     $("input").select(function () {
+            //         $("#result").text("Metni seçtiniz");
+            //     });
+            //     $("#Btn").click(function () {
+            //         $("input").trigger("select");
+            //     });
+            // });
+
+            // Örnek 8
+            // $(function () {
+            //     $("input").select(function () {
+            //         $("#result").text("Metni seçtiniz");
+            //     });
+            //     $("#Btn").click(function () {
+            //         $("input").triggerHandler("select");
+            //     });
+            // });
+        });
+    </script>
+</body>
+
+</html>

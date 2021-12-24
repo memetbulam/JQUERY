@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 26 AJAX Kullanımı 2</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson26.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome to My JQuery Lesson</h2>
+    </div>
+
+    <p id="result"></p>
+    <button type="button" class="btn btn-dark">Click</button>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("button").click(function () {
+            //     $.ajax({
+            //         url: "../text/lesson26.txt",
+            //         success: function (result) {
+            //             $("#result").html(result);
+            //         }
+            //     });
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $.ajaxSetup({
+            //         url: "../text/lesson26.txt",
+            //         success: function (result) {
+            //             $("#result").html(result);
+            //         }
+            //     });
+            //     $.ajax();
+            // });
+
+            // Örnek 3
+            // $("button").click(function () {
+            //     $.getJSON("../json/lesson26.json", function (result) {
+            //         $("#result").html("<b>İsim: </b>" + result.name + "<br><b>Soyisim: </b>" + result.lastname + "<br><b>Yaş: </b>" + result.age);
+            //     });
+            // });
+
+            // Örnek 4
+            // $("button").click(function () {
+            //     var txt = '{"name": "Ahmet","lastname": "HELVACI","age": 35 }';
+            //     var obj = JSON.parse(txt);
+            //     $("p").html("<b>İsim: </b>" + obj.name + "<br><b>Soyisim: </b>" + obj.lastname + "<br><b>Yaş: </b>" + obj.age);
+            // });
+
+            // Örnek 5
+            // $("button").click(function () {
+            //     $.getScript("../JS/lesson26.js");
+            // });
+
+            // Örnek 6
+            // person = new Object();
+            // person.name = "Ahmet";
+            // person.lastname = "HELVACI";
+            // person.age = 35;
+            // $("button").click(function () {
+            //     $("p").text($.param(person));
+            // });
+        });
+    </script>
+</body>
+
+</html>

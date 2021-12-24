@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 7 Event Metodları 4</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2>JQuery Eğitim Seti</h2>
+        <p>JQuery ile eventlerin tamamına hakim oluyoruz</p>
+        <div id="result2"></div>
+        <input type="text" name="usernameout" id="usernameout"><span id="result"></span>
+        <div id="seconddiv" class="my-3" style="border: 2px solid black; padding: 10px;">
+            Username:<input type="text" name="usernamein" id="usernamein"><br><br>
+            Password:<input type="password" name="pass" id="pass">
+        </div>
+
+    </div>
+    <script>
+        $(function () {
+            // Örnek 1
+            //toggle 1.9 üstü kaldırıldı. Kırmızı,sarı,yeşil
+
+            // Örnek 2
+            // $("p").hover(function () {
+            //     $(this).css("color", "green");
+            // }, function () {
+            //     $(this).css("color", "red");
+            // });
+
+            // Örnek 3
+            // $("input").focus(function () {
+            //     $("#result").text(" Kullanıcı Adını Gir");
+            // });
+
+            // Örnek 4
+            // $("div").focusin(function () {
+            //     $("#seconddiv").css("background-color", "darkred");
+            // });
+            // $("div").focusout(function () {
+            //     $("#seconddiv").css("background-color", "darkgoldenrod");
+            // });
+
+            // Örnek 5
+            // var x = 0;
+            // $("p").mouseover(function () {
+            //     $("#result2").text(x += 1);
+            // });
+
+            // Örnek 6
+            $("p").mouseover(function () {
+                $("#result2").text("Paragraf alanına girdin!");
+            });
+            $("p").mouseout(function () {
+                $("#result2").text("Paragraf alanından çıktın!");
+            });
+        });
+    </script>
+</body>
+
+</html>

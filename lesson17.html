@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ders 17 Elementleri Kaldırmak ve Css Yönetimi</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/lesson17.css" />
+    <script src="JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <!-- Örnek 1 -->
+    <!-- <div id="result">
+        <p>JQuery ile element kaldırma</p>
+        <p>JQuery ile remove kullanımı</p>
+        <p>JQuery ile empty kullanımı</p>
+        <ol>
+            <li>Javascript</li>
+            <li>JQuery</li>
+            <li>Angular JS</li>
+        </ol>
+    </div>
+    <p>
+        <button id="btnRemove">Remove</button>
+        <button id="btnEmpty">Empty</button>
+    </p> -->
+
+    <!-- Örnek 2 -->
+    <!-- <p>JQuery ile element kaldırma</p>
+    <p id="demo">JQuery ile remove kullanımı</p>
+    <p class="color">JQuery ile empty kullanımı</p>
+    <div id="result">Bu metine bir class atayacağım</div>
+    <p><button type="button">Remove</button></p> -->
+
+    <!-- Örnek 3 -->
+    <!-- <p>JQuery ile element kaldırma</p>
+    <p>JQuery ile remove kullanımı</p>
+    <p>JQuery ile empty kullanımı</p>
+    <div id="result">Bu metine bir class atayacağım</div>
+    <p><button type="button">Click</button></p> -->
+
+    <!-- Örnek 4 -->
+    <!-- <p class="red">JQuery ile element kaldırma</p>
+    <p>JQuery ile remove kullanımı</p>
+    <p class="red">JQuery ile empty kullanımı</p>
+    <div id="result">Bu metine bir class atayacağım</div>
+    <p><button type="button">Remove Class</button></p> -->
+
+    <!-- Örnek 5 -->
+    <p>JQuery ile element kaldırma</p>
+    <p>JQuery ile remove kullanımı</p>
+    <p>JQuery ile empty kullanımı</p>
+    <div id="result">Bu metine bir class atayacağım</div>
+    <p><button type="button">toggle Class</button></p>
+    <script>
+        $(function () {
+            // Örnek 1
+            // $("#btnRemove").click(function () {
+            //     $("#result").remove();
+            // });
+            // $("button").click(function () {
+            //     $("#result").empty();
+            // });
+
+            // Örnek 2
+            // $("button").click(function () {
+            //     $("p").remove(".color, #demo");
+            // });
+
+            // Örnek 3
+            // $("button").click(function () {
+            //     $("h2,p").addClass("red");
+            //     $("div").addClass("important red");
+            // });
+
+            // Örnek 4
+            // $("button").click(function () {
+            //     $("h2,p").removeClass("red");
+            // });
+
+            // Örnek 5
+            $("button").click(function () {
+                $("p").toggleClass("red");
+            });
+        });
+    </script>
+</body>
+
+</html>
